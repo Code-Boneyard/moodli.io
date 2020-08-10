@@ -1,6 +1,6 @@
 import { Controller, Get } from '@nestjs/common';
 
-import { Message } from '@estibase/api-interfaces';
+import { Message } from '@moodlio/api-interfaces';
 
 import { AppService } from './app.service';
 

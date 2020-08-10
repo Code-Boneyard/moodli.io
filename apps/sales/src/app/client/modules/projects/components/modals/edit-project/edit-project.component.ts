@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'estibase-edit-project',
+  selector: 'moodlio-edit-project',
   templateUrl: './edit-project.component.html',
   styles: [
   ],

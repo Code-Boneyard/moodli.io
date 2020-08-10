@@ -10,7 +10,7 @@
       },
       "root": "apps/web",
       "sourceRoot": "apps/web/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -133,7 +133,7 @@
       },
       "root": "apps/support",
       "sourceRoot": "apps/support/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -257,7 +257,7 @@
       },
       "root": "apps/learning",
       "sourceRoot": "apps/learning/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -461,7 +461,7 @@
       },
       "root": "apps/mobile",
       "sourceRoot": "apps/mobile/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -584,7 +584,7 @@
       },
       "root": "apps/sales",
       "sourceRoot": "apps/sales/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -709,7 +709,7 @@
       },
       "root": "apps/dev",
       "sourceRoot": "apps/dev/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -832,7 +832,7 @@
       },
       "root": "apps/docs",
       "sourceRoot": "apps/docs/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -955,7 +955,7 @@
       },
       "root": "apps/landing",
       "sourceRoot": "apps/landing/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -1079,7 +1079,7 @@
       },
       "root": "apps/investors",
       "sourceRoot": "apps/investors/src",
-      "prefix": "estibase",
+      "prefix": "moodlio",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",

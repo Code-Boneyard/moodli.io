@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'estibase-locals-list',
+  selector: 'moodlio-locals-list',
   templateUrl: './locals-list.component.html'
 })
 

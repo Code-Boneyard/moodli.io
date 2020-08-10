@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'estibase-invoice-list',
+  selector: 'moodlio-invoice-list',
   templateUrl: './invoice-list.component.html',
   styles: [
   ],

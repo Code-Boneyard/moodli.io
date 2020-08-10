@@ -31,11 +31,11 @@ export class IconMenuComponent {
   }
 
   openSupport() {
-    window.open("https://web.estibase.com/support", "_blank");
+    window.open("https://web.moodlio.com/support", "_blank");
   }
 
   openDocumentation() {
-    window.open("https://docs.estibase.com", "_blank");
+    window.open("https://docs.moodlio.com", "_blank");
   }
 
 

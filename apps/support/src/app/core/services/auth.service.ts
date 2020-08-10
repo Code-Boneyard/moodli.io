@@ -87,7 +87,7 @@ export class AuthService {
   signOut() {
     this.afAuth.signOut().then(() => {
       this.isAuthenticated = false;
-      this.document.location.href = 'https://www.estibase.com';
+      this.document.location.href = 'https://www.moodlio.com';
     });
 
     

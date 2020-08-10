@@ -3,7 +3,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 
 
 @Component({
-  selector: 'estibase-root',
+  selector: 'moodlio-root',
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {

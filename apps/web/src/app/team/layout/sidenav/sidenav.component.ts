@@ -13,6 +13,6 @@ export class SidenavComponent implements OnInit {
   }
   onNavigate(){
     // this.router.navigateByUrl("https://www.google.com");
-    window.open("https://estibase.slack.com/", "_blank");
+    window.open("https://moodlio.slack.com/", "_blank");
   }
 }

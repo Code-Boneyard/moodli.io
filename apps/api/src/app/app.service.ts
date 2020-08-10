@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Message } from '@estibase/api-interfaces';
+import { Message } from '@moodlio/api-interfaces';
 
 @Injectable()
 export class AppService {

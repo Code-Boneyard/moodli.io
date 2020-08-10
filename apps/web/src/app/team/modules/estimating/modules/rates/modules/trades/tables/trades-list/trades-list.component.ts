@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'estibase-trades-list',
+  selector: 'moodlio-trades-list',
   templateUrl: './trades-list.component.html'
 })
 export class TradesListComponent implements OnInit {

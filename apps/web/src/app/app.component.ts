@@ -9,7 +9,7 @@ import { ConnectionService } from './core/services/connection.service';
 ;
 
 @Component({
-  selector: 'estibase-root',
+  selector: 'moodlio-root',
   templateUrl: './app.component.html',
   animations: [routerAnimation()],
 })

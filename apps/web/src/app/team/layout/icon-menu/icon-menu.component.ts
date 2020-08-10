@@ -31,19 +31,19 @@ export class IconMenuComponent {
   }
 
   openSupport() {
-    window.open("https://support.estibase.com", "_blank");
+    window.open("https://support.moodlio.com", "_blank");
   }
 
   openLearning() {
-    window.open("https://learning.estibase.com", "_blank");
+    window.open("https://learning.moodlio.com", "_blank");
   }
 
   openDocumentation() {
-    window.open("https://docs.estibase.com", "_blank");
+    window.open("https://docs.moodlio.com", "_blank");
   }
 
   openSlack() {
-    window.open("https://estibase.slack.com", "_blank");
+    window.open("https://moodlio.slack.com", "_blank");
   }
 
 }
