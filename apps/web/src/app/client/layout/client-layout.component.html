@@ -1,0 +1,66 @@
+<div class="module-layout" fxLayout="column" style="height:100vh;">
+  <div class="admin-icon" fxLayout="column" fxLayoutAlign="center center">
+    <button mat-icon-button [matMenuTriggerFor]="adminMenu">
+      <i class="fal fa-cog" style="color: white;font-size: 35px;"></i>
+    </button>
+  </div>
+  <mat-toolbar class="app-navbar" fxLayout="row" fxLayout="start ">
+    <div class="navbar-container" fxLayout="row" fxLayoutAlign="space-between ">
+      <div class="left-container" fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide fxShow.lt-md><i class="fal fa-bars"
+            style="margin-top: 10px;"></i></button>
+        <div class="brand-container" fxLayout="column" fxLayoutAlign="center stretch" fxHide fxShow.gt-md>
+
+          <mat-nav-list>
+            <mat-list-item routerLink="/client" routerLinkActive="active">
+              <div class="brand-logo" fxLayout="row" fxLayoutAlign="center ">
+                <img src="https://www.logolynx.com/images/logolynx/01/017d90cc4df273bab60c3dcb5def88e7.jpeg"
+                  height="35px" style="margin-bottom: 3px;" />
+              </div>
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+      </div>
+      <div class="menu-container" fxLayout="column" fxLayoutAlign="center " fxHide fxShow.gt-sm>
+        <client-nav-menu></client-nav-menu>
+      </div>
+      <div class="right-container" fxLayout="column" fxLayoutAlign="end ">
+        <client-icon-menu></client-icon-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxLayout="column" style="flex-grow: 1;">
+    <mat-sidenav class="primary-sidenav" #sidenav mode="side">
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main-container" fxLayout="column" style="flex-grow: 1;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <!-- Footer -->
+  <div class="footer-container" fxLayout="column">
+
+  </div>
+</div>
+
+
+<mat-menu #adminMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="./../admin/" routerLinkActive="active" class="pointer">
+    <i class="far fa-users"></i>&nbsp; &nbsp; Admin Dashboard</button>
+  <button mat-menu-item routerLink="./../client" routerLinkActive="active" class="pointer">
+    <i class="far fa-exchange"></i>&nbsp; &nbsp; Client View</button>
+  <button mat-menu-item routerLink="./../admin/users" routerLinkActive="active" class="pointer">
+    <i class="far fa-users-cog"></i>&nbsp; &nbsp; Manage Users</button>
+  <button mat-menu-item routerLink="./../admin/tenants" routerLinkActive="active" class="pointer">
+    <i class="far fa-building"></i>&nbsp; &nbsp; Manage Tenants</button>
+  <button mat-menu-item routerLink="./../admin/settings" routerLinkActive="active" class="pointer">
+    <i class="far fa-tools"></i>&nbsp; &nbsp; Application Settings</button>
+  <button mat-menu-item routerLink="./../admin/user/analytics" routerLinkActive="active" class="pointer">
+    <i class="far fa-user-chart"></i>&nbsp; &nbsp; User Analytics</button>
+  <button mat-menu-item routerLink="./../admin/reports" routerLinkActive="active" class="pointer">
+    <i class="far fa-file-chart-pie"></i>&nbsp; &nbsp; Admin Reports</button>
+</mat-menu>

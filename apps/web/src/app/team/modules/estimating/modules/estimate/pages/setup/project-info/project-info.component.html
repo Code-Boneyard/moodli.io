@@ -1,0 +1,55 @@
+<mat-card>
+  <form>
+    
+  </form>
+  <mat-card-content>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Project Name</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="SFO Terminal 3 West">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Category</mat-label>
+        <textarea matInput placeholder="Airport / Terminal"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Design Stage</mat-label>
+        <textarea matInput placeholder="50%"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Design Progression</mat-label>
+        <textarea matInput placeholder="Design Development"></textarea>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+      </mat-form-field>
+      <mat-list-item>Zip</mat-list-item>
+      <mat-list-item>Sales Tax</mat-list-item>
+      <h4>Logistics</h4>
+      <mat-list-item>Logistics</mat-list-item>
+      <mat-list-item>Laydown Space Available</mat-list-item>
+      <mat-list>
+        <mat-list-item>Project Name</mat-list-item>
+        <mat-list-item>Project Description</mat-list-item>
+        <mat-list-item>LEED Targeting</mat-list-item>
+        <mat-list-item>BIM Participation</mat-list-item>
+        <mat-list-item>Architectural Index</mat-list-item>
+        <mat-list-item>Technology Index</mat-list-item>
+        <mat-list-item>Interior : Exterior Wall Ratio</mat-list-item>
+        <mat-list-item>Substitutions Permitted?</mat-list-item>
+        <mat-list-item>Parking Provided by Owner?</mat-list-item>
+        <mat-list-item>Subsystems</mat-list-item>
+      </mat-list>
+      Project Type
+    </form>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button>Ok</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,28 @@
+<mat-card-title>RECENT FILES</mat-card-title>
+<div style="display: grid;  grid-gap: 50px;  grid-template-columns: auto auto auto auto;">
+
+  <button mat-icon-button [matMenuTriggerFor]="teamActions">
+    <div>
+      <i class="fas fa-file-pdf fa-2x" style="color: gray;"></i>
+      <p style="font-size: smaller;">IBEW #6 Rates</p>
+    </div>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="teamActions">
+    <div>
+      <i class="fas fa-file-pdf fa-2x" style="color: gray;"></i>
+      <p style="font-size: smaller;">IBEW #617 Rates</p>
+    </div>
+  </button>
+  <button mat-icon-button [matMenuTriggerFor]="teamActions">
+    <div>
+      <i class="fas fa-file-pdf fa-2x" style="color: gray;"></i>
+      <p style="font-size: smaller;">IBEW #302 Rates</p>
+    </div>
+  </button>
+
+  <mat-menu #teamActions="matMenu" xPosition="before">
+    <button mat-menu-item class="pointer">
+      <i class="fal fa-user"></i>&nbsp; &nbsp; View Profile</button>
+    <button mat-menu-item routerLink="modules/tenants/teams" routerLinkActive="active" class="pointer">
+      <i class="fal fa-envelope"></i>&nbsp; &nbsp; Send Message</button>
+  </mat-menu>

@@ -1,0 +1,23 @@
+.hero-container {
+  margin: 15px;
+  height: 100%;
+
+}
+
+.hero-left {
+  padding: 50px;
+}
+
+.hero-right {
+  transition: all 0.3s ease;
+}
+
+.hero-right:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+p {
+  line-height: 35px;
+}

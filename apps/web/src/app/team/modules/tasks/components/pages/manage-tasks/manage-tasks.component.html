@@ -1,0 +1,16 @@
+<div class="page-layout" fxLayout="column">
+  <h1>MANAGE TASKS</h1>
+  <mat-divider style="margin-bottom: 0px !important;"></mat-divider>
+  <div class="actions-container">
+    <button mat-raised-button class="action-button" color="accent" routerLink='/admin/dashboard'>Back</button>
+    <button mat-raised-button class="action-button" routerLink='/admin/roles'>Manage Roles</button>
+    <button mat-raised-button class="action-button" routerLink='/admin/roles'>Manage Permissions</button>
+    <button mat-raised-button class="action-button" routerLink='/admin/tenants'>Manage Tenants</button>
+    <button mat-raised-button class="action-button" routerLink='/admin/settings'>Application Settings</button>
+  </div>
+  <mat-divider></mat-divider>
+
+
+  <team-task-list></team-task-list>
+
+</div>

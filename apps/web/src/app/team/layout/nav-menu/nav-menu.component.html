@@ -1,0 +1,93 @@
+<div class="nav-menu" fxLayout="row">
+  <mat-nav-list fxLayout="row" fxLayoutAlign="center center">
+    <mat-list-item [matMenuTriggerFor]="projectsMenu">
+      <h3>PROJECTS &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+    <mat-list-item [matMenuTriggerFor]="estimatingMenu">
+      <h3>ESTIMATING &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+    <mat-list-item [matMenuTriggerFor]="reportingMenu">
+      <h3>REPORTING &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+    <mat-list-item [matMenuTriggerFor]="analyticsMenu">
+      <h3>ANALTYICS &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+    <mat-list-item [matMenuTriggerFor]="filesMenu">
+      <h3>FILES &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+    <mat-list-item [matMenuTriggerFor]="clientsMenu">
+      <h3>CLIENTS &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <mat-menu #estimatingMenu="matMenu" xPosition="after">
+    <button mat-menu-item [matMenuTriggerFor]="estimates" style="min-width: 200px;">Estimates</button>
+    <button mat-menu-item [matMenuTriggerFor]="database">Database</button>
+    <button mat-menu-item [matMenuTriggerFor]="trades">Trades</button>
+    <button mat-menu-item routerLink="/team/estimating/rates">Labor Rates</button>
+    <button mat-menu-item routerLink="/team/systems/manage" mat-menu-item>Manage Systems</button>
+
+  </mat-menu>
+  <mat-menu #reportingMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/team/reports" style="min-width: 200px;">Manage Reports</button>
+    <button mat-menu-item [matMenuTriggerFor]="reports">Report Builder</button>
+    <button mat-menu-item routerLink="/team/reports/preferences" mat-menu-item>Preferences</button>
+  </mat-menu>
+  <mat-menu #analyticsMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/team/analytics/cost-indices" style="min-width: 200px;">Costs Indices</button>
+    <button mat-menu-item routerLink="/team/analytics/historical">Historical Costs</button>
+    <button mat-menu-item routerLink="/team/analytics/modeling">Cost Modeling</button>
+    <button mat-menu-item routerLink="/team/analytics/benchmark">Benchmarking</button>
+  </mat-menu>
+  <mat-menu #filesMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/team/files" style="min-width: 200px;">Manage Files</button>
+    <button mat-menu-item routerLink="/team/files/upload">Upload Files</button>
+  </mat-menu>
+  <mat-menu #clientsMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="/team/clients/invite" style="min-width: 200px;">Quick Invite</button>
+    <button mat-menu-item routerLink="/team/clients">Manage Clients</button>
+    <button mat-menu-item routerLink="/team/teams">Manage Teams</button>
+  </mat-menu>
+</div>
+
+
+<mat-menu #trades="matMenu">
+  <button mat-menu-item routerLink="/team/estimating/rates/trades" mat-menu-item>Manage Trades</button>
+  <button mat-menu-item routerLink="/team/estimating/rates/unions">Manage Unions</button>
+
+</mat-menu>
+
+<mat-menu #reports="matMenu">
+  <button mat-menu-item routerLink="/team/reports/trends">Cost Trend Evaluation</button>
+  <button mat-menu-item routerLink="/team/reports/trends">Variance Analysis</button>
+  <button mat-menu-item routerLink="/team/reports/trends">Reconciliation Analysis</button>
+  <button mat-menu-item routerLink="/team/reports/custom">Custom Reports</button>
+</mat-menu>
+
+<mat-menu #estimates="matMenu">
+  <button mat-menu-item routerLink="/team/estimating/new" mat-menu-item>New Estimate</button>
+  <button mat-menu-item routerLink="/team/estimating" mat-menu-item>Manage Estimates</button>
+  <button mat-menu-item routerLink="/team/estimating/templates" mat-menu-item>Templates</button>
+  <button mat-menu-item routerLink="/team/estimating/templates" mat-menu-item>Defaults</button>
+</mat-menu>
+
+
+
+<mat-menu #database="matMenu">
+
+  <button mat-menu-item routerLink="/team/items">Item Database</button>
+  <button mat-menu-item routerLink="/team/items">Assemblies Catalog</button>
+  <button mat-menu-item routerLink="/team/items">Phase Codes</button>
+  <button mat-menu-item>Supplier-Sync™ Pricing</button>
+  <button mat-menu-item>Trade-Sync™ Labor</button>
+</mat-menu>
+
+
+<mat-menu #projectsMenu="matMenu">
+  <button mat-menu-item routerLink="/team/projects/manage" mat-menu-item>New Project</button>
+  <button mat-menu-item routerLink="/team/projects/manage" mat-menu-item>Manage Projects</button>
+  <button mat-menu-item routerLink="/team/projects/types">Project Types</button>
+  <button mat-menu-item routerLink="/team/projects/map">Project Map</button>
+
+
+</mat-menu>

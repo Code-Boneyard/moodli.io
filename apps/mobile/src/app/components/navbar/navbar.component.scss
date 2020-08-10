@@ -1,0 +1,26 @@
+.fill-spacer {
+    flex: 1 1 auto;
+}
+.brand-item {
+    font-size: large;
+}
+.mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+    border-bottom: solid;
+    border-color: rgb(216, 216, 216);
+    border-width: 1px;
+}
+.mat-toolbar.mat-primary {
+    background: white;
+
+    .mat-list-item {
+        font-size: small;
+        color: #455A64;
+
+    }
+}

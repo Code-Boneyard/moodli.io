@@ -1,0 +1,19 @@
+<mat-nav-list >
+    <div class="project-grid" [@listAnimation]="projects.length">
+      <mat-card class="project-item" *ngFor="let project of projects" fxLayout="row">
+        <div class="project-image" fxLayout="column">
+          <img [src]="project.projectPhotoURL" height="100%" width="120px"/>
+        </div>
+
+        <div class="project-details" fxLayout="column" fxFlex>
+          <mat-card-title>{{project.projectName}}</mat-card-title>
+
+            <p>Status: {{project.status}}</p>
+            <p>Size: {{project.size}}</p>
+            <p>Location: {{project.location}}</p>
+
+        </div>
+        
+      </mat-card>
+    </div>
+  </mat-nav-list>

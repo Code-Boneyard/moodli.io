@@ -1,0 +1,46 @@
+<div class="module-layout" fxLayout="column" style="height:100vh;">
+  <!-- Primary Navbar-->
+  <mat-toolbar class="app-navbar" color="primary" fxLayout="row" fxLayout="start ">
+    <div class="navbar-container" fxLayout="row" fxLayoutAlign="space-between ">
+      <div class="left-container" fxLayout="row" fxLayoutAlign="start center">
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide fxShow.lt-md><i
+          class="fal fa-bars" style="margin-top: 10px;"></i></button>
+        <div class="brand-container" fxLayout="column" fxLayoutAlign="center stretch" fxHide fxShow.gt-md>
+
+          <mat-nav-list>
+            <mat-list-item routerLink="/team/" routerLinkActive="active">
+              <div class="brand-logo" fxLayout="row" fxLayoutAlign="center ">
+                <img
+                  src="https://firebasestorage.googleapis.com/v0/b/estibase-dev.appspot.com/o/logos%2Flogo_primary-white.png?alt=media&token=cc6792dc-6c16-4ff2-8167-945715081d47"
+                  height="35px" />
+              </div>
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+      </div>
+      <div class="menu-container" fxLayout="column" fxLayoutAlign="center " fxHide fxShow.gt-sm>
+        <team-nav-menu></team-nav-menu>
+      </div>
+      <div class="right-container" fxLayout="column" fxLayoutAlign="end ">
+        <team-icon-menu></team-icon-menu>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <!-- Side Navigation Drawer -->
+  <mat-sidenav-container fxLayout="column" style="flex-grow: 1;">
+    <mat-sidenav class="primary-sidenav" #sidenav mode="side">
+      <team-sidenav></team-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="main-container" fxLayout="column" style="flex-grow: 1;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <!-- Footer -->
+  <div class="footer-container" fxLayout="column">
+
+  </div>
+</div>

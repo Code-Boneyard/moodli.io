@@ -1,0 +1,146 @@
+<div class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch">
+  <div class="header-container" fxLayout="row" fxFlex >
+    <div class="title-container" fxLayout="column" fxFlex>
+      <h3>PROJECT CLOSEOUT</h3> 
+    </div>
+    <div class="accordion-actions" fxLayout="column" fxLayoutAlign="center center" >
+      <mat-nav-list fxLayout="column" >
+        <mat-list-item (click)="togglePanel()" fxLayout="column" fxLayoutAlign="end end"> <i class="fal fa-chevron-double-down"></i></mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CLOSEOUT KPIs
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="overview-container">
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>PUNCHLIST ITEMS</mat-card-title>
+            <mat-card-content>
+              <h2>5% COMPLETE</h2>
+              <p>as of April 22, 2020</p>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>INSPECTIONS</mat-card-title>
+            <mat-card-content>
+              <h2>13/189</h2>
+              <p>Next in 18 days</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>DAYS TO OCCUPANCY</mat-card-title>
+            <mat-card-content>
+              <h2>875</h2>
+              <p>February 8, 2020</p>
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CLOSEOUT MANAGEMENT
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="dashboard-container" >
+        <mat-card class="card-square-md">
+          <mat-card-title>SYSTEM STARTUP</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card-square-md">
+          <mat-card-title>PUNCHLIST</mat-card-title>
+            <mat-card-content>
+              <p>My Tasks</p>
+              <div echarts [options]="salesChartPie" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>INSPECTIONS</mat-card-title>
+            <mat-card-content>
+              <p>My Tasks</p>
+              <div echarts [options]="salesChartPie" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-wide">
+          <mat-card-title>COMMISSIONING TIMELINE</mat-card-title>
+            <mat-card-content>
+                Gantt Chart
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>CLOSEOUT DOCUMENTS</mat-card-title>
+            <mat-card-content>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>OPERATIONS MANUALS</mat-card-title>
+            <mat-card-content >
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>AS-BUILT DOCUMENTATION</mat-card-title>
+            <mat-card-content>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>WARRANTY SUMMARY</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CUSTOM WIDGETS
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="overview-container">
+        <mat-card class="overview-card">
+          <mat-card-title>SIZE</mat-card-title>
+            <mat-card-content>
+              <h2>558,850 GSF</h2>
+            </mat-card-content>
+        </mat-card>
+          <mat-card class="card-wide">
+            <mat-card-title>ACTUAL VS BUDGET</mat-card-title>
+              <mat-card-content>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+

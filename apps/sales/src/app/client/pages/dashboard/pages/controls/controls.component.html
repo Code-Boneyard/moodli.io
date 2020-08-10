@@ -1,0 +1,257 @@
+<div class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch">
+  <div class="header-container" fxLayout="row" fxFlex >
+    <div class="title-container" fxLayout="column" fxFlex>
+      <h3>PROJECT CONTROLS</h3> 
+    </div>
+    <div class="accordion-actions" fxLayout="column" fxLayoutAlign="center center" >
+      <mat-nav-list fxLayout="column" >
+        <mat-list-item (click)="togglePanel()" fxLayout="column" fxLayoutAlign="end end"> <i class="fal fa-chevron-double-down"></i></mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CONTROLS KPIs
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="overview-container">
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>BASELINE BUDGET</mat-card-title>
+            <mat-card-content>
+              <h2>$2,857,860</h2>
+              <p>100% SD Budget</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>CURRENT BUDGET</mat-card-title>
+            <mat-card-content>
+              <h2>$2,857,860</h2>
+              <p>100% SD Budget</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>FORECAST BUDGET</mat-card-title>
+            <mat-card-content>
+              <h2>$2,857,860</h2>
+              <p>100% SD Budget</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>ACTUAL COST JTD</mat-card-title>
+            <mat-card-content>
+              <h2>$585,910</h2>
+              <p>as of April 22, 2020</p>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>COST VARIANCE %</mat-card-title>
+            <mat-card-content>
+              <h2>35%</h2>
+              <p>50% Design Development</p>
+            </mat-card-content>
+
+        </mat-card>
+        <mat-card class="overview-card" fxLayout="column" fxLayoutAlign="center center">
+          <mat-card-title>SCHEDULE VARIANCE %</mat-card-title>
+            <mat-card-content>
+              <h2>-22% / -55 days</h2>
+              <p>22%</p>
+            </mat-card-content>
+        </mat-card>
+      </div>
+
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          SCHEDULE
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container" >
+        <mat-card class="card-wide">
+          <mat-card-title>COST TREND</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+
+
+        <mat-card class="card-wide">
+          <mat-card-title>CASH FLOW TREND</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 260px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+
+        <mat-card class="card-square-md">
+          <mat-card-title>ACTIVE CONTRACTS</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="card-square-md">
+          <mat-card-title>BUDGET TRANSFERS</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>RECENT BUDGETS</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-wide">
+          <mat-card-title>CASH POSITION DETAIL</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>COMMITTED VS ACTUAL</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>% BILLED TO DATE</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>FORECAST TREND ANALYSIS</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          ESTIMATING
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container" >
+        <mat-card class="card-wide">
+          <mat-card-title>PROJECT COST JTD</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>COST PER SYSTEM</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="salesChartPie" [autoResize]="true" style="height: 235px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>COST TREND</mat-card-title>
+            <mat-card-content>
+              <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 260px;"></div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>RECENT ESTIMATES</mat-card-title>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          LABOR TRACKING
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="overview-container">
+        <mat-card class="overview-card">
+          <mat-card-title>SIZE</mat-card-title>
+            <mat-card-content>
+              <h2>558,850 GSF</h2>
+            </mat-card-content>
+        </mat-card>
+          <mat-card class="card-wide">
+            <mat-card-title>ACTUAL VS BUDGET</mat-card-title>
+              <mat-card-content>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CUSTOM WIDGETS
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="overview-container">
+        <mat-card class="overview-card">
+          <mat-card-title>SIZE</mat-card-title>
+            <mat-card-content>
+              <h2>558,850 GSF</h2>
+            </mat-card-content>
+        </mat-card>
+          <mat-card class="card-wide">
+            <mat-card-title>ACTUAL VS BUDGET</mat-card-title>
+              <mat-card-content>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>
+

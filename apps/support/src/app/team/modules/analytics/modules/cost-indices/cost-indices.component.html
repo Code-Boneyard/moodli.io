@@ -1,0 +1,87 @@
+<div class="page-layout" fxLayout="column">
+  <h1>COST INDICES</h1>
+  <mat-divider style="margin-bottom: 0px !important;"></mat-divider>
+  <div class="actions-container">
+    <button class="action-button" mat-raised-button color="primary" routerLink='/team/estimating/'>Manage
+      Estimates</button>
+    <button class="action-button" mat-raised-button color="primary" routerLink='/team/projects'>Manage
+      Projects</button>
+    <button class="action-button" mat-raised-button routerLink='/team/clients'>Manage
+      Clients</button>
+    <button class="action-button" mat-raised-button>Estimating
+      View</button>
+    <button class="action-button" mat-raised-button routerLink='/team/systems'>Manage
+      Systems</button>
+    <button class="action-button" mat-raised-button routerLink='/team/estimating/rates'>Manage
+      Rates</button>
+    <button class="action-button" mat-raised-button routerLink='/team/reports'>Manage Reports
+    </button>
+  </div>
+
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+
+  <div class="selector-container" fxLayout="column">
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <mat-label>Source</mat-label>
+          <mat-select>
+            <optgroup label="General Building and Construction">
+              <option value="volvo">Hollins Consulting, Inc.</option>
+              <option value="saab">Engineering News and Review (ENR)</option>
+              <option value="saab">Turner Construction Company</option>
+              <option value="saab">Rider Levett Bucknall</option>
+              <option value="saab">Leland Saylor Costs</option>
+              <option value="volvo">RS Means</option>
+            </optgroup>
+            <optgroup label="Trade-Specific">
+              <option value="saab">National Electrical Contractors Association (NECA)</option>
+              <option value="mercedes">Mechanical Contractors Association of America (MCAA)</option>
+            </optgroup>
+            <optgroup label="National Economic Performace">
+              <option value="saab">US Bureau of Labor Statistics</option>
+              <option value="saab">US Bureau of Labor Statistics</option>
+              <option value="saab">Automatic Data Processing, Inc. (ADP)</option>
+            </optgroup>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Index</mat-label>
+          <mat-select>
+            <option value="volvo">HCI Construction Cost Index</option>
+            <option value="volvo">RS Means Commercial Construction</option>
+            <option value="saab">ENR Building Cost Index</option>
+            <option value="saab">Turner Building Cost Index</option>
+            <option value="saab">Turner Actual Cost Index</option>
+            <option value="saab">Rider Levett Bucknall Actual Cost Inde</option>
+            <option value="saab">Mortenson Cost Bureau of Labor Statistics Producer Price Index</option>
+            <option value="saab">Leland Saylor Costs</option>
+            <option value="saab">PPI New Nonrsidential Construction</option>
+            <option value="saab">PPI New Nonrsidential Building Types</option>
+            <option value="saab">PPI Materials and Supply Inputs to Construction Industries</option>
+            <option value="saab">RS Means Key Material Cost Updates</option>
+            <option value="saab">National Highway Construction Cost Index</option>
+            <option value="saab">IHS Power Plant Cost Indices</option>
+            <option value="saab">The Bureau of Reclamation Construction Cost Index</option>
+            <option value="saab">S&P/Case-Shiller National Home Price Index</option>
+            <option value="saab">Beck BiAnnual Cost Report</option>
+            <option value="saab">Consumer Price Index</option>
+            <option value="saab">Jones Lang LaSalle</option>
+            <option value="saab">ADP Jobs Report</option>
+            <option value="saab">SF Business Times Lists</option>
+            <option value="saab">Peuget Sound Business Times</option>
+            <option value="saab">Los Angeles Business Times</option>
+            <option value="saab">Sierra West Construction Cost Index</option>
+            <option value="saab">DGS California Construction Cost Index CCCI</option>
+            <option value="saab">Vermeulens Construction Cost Index</option>
+            <option value="saab">New York Building Congress New York City Construction Costs</option>
+            <option value="saab">U S Army Civil Works Construction Cost Index CWCCIS</option>
+            <option value="saab">Turner And Townsend International Construction Markets</option>
+            <option value="saab">US Historical Construction Cost Indices 1800s to 1957</option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

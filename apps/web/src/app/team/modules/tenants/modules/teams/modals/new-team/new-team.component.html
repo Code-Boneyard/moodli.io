@@ -1,0 +1,27 @@
+<div class="modal-layout" fxFill fxLayout="column">
+  <h1>NEW TEAM</h1>
+  <mat-divider></mat-divider>
+
+  <div class="modal-container">
+    <form [formGroup]="addTeamFormGroup">
+      <div fxLayout="column">
+        <mat-form-field class="md-field">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="id">
+        </mat-form-field>
+        <mat-form-field class="md-field">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+        </mat-form-field>
+        <mat-form-field class="md-field">
+          <mat-label>Active</mat-label>
+          <input matInput formControlName="isActive">
+        </mat-form-field>
+      </div>
+    </form>
+    <mat-dialog-actions>
+      <button mat-raised-button color="primary" (click)="save()">Save</button>
+      <button class="mat-raised-button" (click)="close()">Close</button>
+    </mat-dialog-actions>
+  </div>
+</div>

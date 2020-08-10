@@ -1,0 +1,92 @@
+<mat-toolbar class="context-toolbar" color="accent"
+  style="width: 100vw;padding-right: 0px;padding-left: 0px;min-height: 40px;" fxLayout="row"
+  fxLayoutAlign="space-between center">
+
+  <mat-nav-list style="margin-bottom: .5rem;">
+    <mat-list-item>
+      <h5>SFO TERMINAL 3 WEST MODERNIZATION</h5>
+    </mat-list-item>
+  </mat-nav-list>
+
+  <mat-nav-list style="margin-bottom: .5rem;margin-right: 0px;" fxLayout="row">
+    <mat-list-item>
+      <h5>95% CD ESTIMATE</h5>
+    </mat-list-item>
+
+    <mat-list-item>
+      <i style="color: white;font-size: 20px;" class="fal fa-window-close"></i>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-toolbar>
+<mat-toolbar class="estimate-toolbar" color="accent" style="width: 100vw; height: 24px !important;" fxLayout="row"
+  fxLayoutAlign="space-between center">
+  <div class="toolbar-menu" fxLayout="column">
+    <mat-nav-list fxLayout="row">
+      <mat-list-item [matMenuTriggerFor]="fileMenu">
+        <h5>File</h5>
+      </mat-list-item>
+      <mat-list-item [matMenuTriggerFor]="editMenu">
+        <h5>Edit</h5>
+      </mat-list-item>
+      <mat-list-item [matMenuTriggerFor]="takeoffMenu">
+        <h5>Takeoff</h5>
+      </mat-list-item>
+      <mat-list-item [matMenuTriggerFor]="settingsMenu">
+        <h5>Settings</h5>
+      </mat-list-item>
+      <mat-list-item [matMenuTriggerFor]="helpMenu">
+        <h5>Help</h5>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+</mat-toolbar>
+
+<!-- MENU ITEMS: -->
+<mat-menu #fileMenu="matMenu" xPosition="after">
+  <button mat-menu-item><i class="fal fa-plus"></i> &nbsp; New</button>
+  <button mat-menu-item><i class="fal fa-folder-open"></i> &nbsp; Open</button>
+  <button mat-menu-item><i class="fas fa-save"></i> &nbsp;Save</button>
+  <button mat-menu-item><i class="fal fa-save"></i> &nbsp;Save As</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="fal fa-file-export"></i> &nbsp;Export</button>
+  <button mat-menu-item><i class="fas fa-print"></i> &nbsp;Print</button>
+  <button mat-menu-item><i class="fal fa-print"></i> &nbsp;Print Preview</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="fas fa-window-close"></i> &nbsp;Close</button>
+</mat-menu>
+<mat-menu #editMenu="matMenu" xPosition="after">
+  <button mat-menu-item><i class="fal fa-cut"></i> &nbsp;Cut</button>
+  <button mat-menu-item><i class="fal fa-copy"></i> &nbsp;Copy</button>
+  <button mat-menu-item><i class="fal fa-paste"></i> &nbsp;Paste</button>
+  <button mat-menu-item><i class="fas fa-trash"></i> &nbsp;Delete</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="fas fa-edit"></i> &nbsp;Modify</button>
+  <button mat-menu-item><i class="fal fa-level-down-alt"></i> &nbsp;Insert</button>
+  <button mat-menu-item><i class="fal fa-search"></i> &nbsp;Find</button>
+  <button mat-menu-item><i class="fas fa-arrow-alt-circle-up"></i> &nbsp;Move Up</button>
+  <button mat-menu-item><i class="fas fa-arrow-alt-circle-down"></i> &nbsp;Move Down</button>
+</mat-menu>
+<mat-menu #takeoffMenu="matMenu" xPosition="after">
+  <button mat-menu-item> <i class="fas fa-ban"></i> &nbsp;Abort</button>
+  <button mat-menu-item><i class="fas fa-edit"></i> &nbsp;Modify</button>
+  <button mat-menu-item><i class="fas fa-check"></i> &nbsp;Complete</button>
+  <button mat-menu-item><i class="fal fa-pencil"></i> &nbsp;Rename</button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="fas fa-random"></i> &nbsp; Substitute Items</button>
+  <button mat-menu-item><i class="fas fa-download"></i> &nbsp;Takeoff Sources</button>
+</mat-menu>
+<mat-menu #settingsMenu="matMenu" xPosition="after">
+  <button mat-menu-item><i class="fas fa-cog"></i> &nbsp; Preferences </button>
+  <button mat-menu-item><i class="fas fa-database"></i> &nbsp;Select Database</button>
+  <button mat-menu-item><i class="fas fa-users"></i> &nbsp;Manage Team </button>
+  <mat-divider></mat-divider>
+  <button mat-menu-item><i class="fas fa-fan"></i> &nbsp;Manage Systems</button>
+  <button mat-menu-item><i class="fal fa-file-chart-line"></i> &nbsp;Report Styles</button>
+  <button mat-menu-item><i class="fas fa-desktop"></i> &nbsp;Screen Styles</button>
+</mat-menu>
+<mat-menu #helpMenu="matMenu" xPosition="after">
+  <button mat-menu-item><i class="fas fa-books"></i> &nbsp;Documentation</button>
+  <button mat-menu-item><i class="fas fa-phone"></i> &nbsp;Support</button>
+  <button mat-menu-item><i class="fas fa-bug"></i> &nbsp;Report an Issue</button>
+  <button mat-menu-item><i class="fas fa-info"></i> &nbsp;About</button>
+</mat-menu>

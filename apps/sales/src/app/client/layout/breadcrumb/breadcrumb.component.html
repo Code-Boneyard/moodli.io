@@ -1,0 +1,9 @@
+<mat-toolbar style="height: 24px; background-color: #455A64">
+  <ol class="breadcrumb">
+    <li *ngFor="let breadcrumb of breadcrumbs" style="color: white; font-size: small; cursor: pointer;">
+      <span [routerLink]="breadcrumb.url" routerLinkActive="router-link-active">
+        {{ breadcrumb.label }}
+      </span>
+    </li>
+  </ol>
+</mat-toolbar>

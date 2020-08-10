@@ -1,0 +1,60 @@
+.banner-container {
+
+  background-color: rgba(224, 197, 72, 0.404);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  h1 {
+    font-size: 4.5em;
+    font-weight: 800;
+    letter-spacing: .2em;
+    line-height: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.75em;
+    line-height: 1.5em;
+  }
+}
+
+.search-form {
+  height: 50px;
+  min-width: 50vw;
+  font-size: x-large;
+  color: rgb(41, 54, 52);
+
+  mat-label {
+    font-size: x-large;
+  }
+
+  input {
+    font-size: x-large;
+    color: rgb(41, 54, 52);
+  }
+}
+
+.cta-actions {
+  margin-top: 50px;
+}
+
+.banner-text {
+  padding: 40px;
+  text-align: center;
+  color: white;
+
+  h2 {
+    font-weight: lighter;
+  }
+}
+
+.mat-stroked-button {
+  padding: 0 1.15em;
+  color: rgb(41, 54, 52);
+  border-color: rgb(41, 54, 52);
+  margin: 0 1.25em;
+  min-width: 3em;
+  line-height: 36.4px
+
+}

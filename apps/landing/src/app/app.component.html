@@ -1,0 +1,25 @@
+<ngx-spinner size="medium" color="#FFFFFF" type="line-scale" [fullScreen]="true">
+  <p style="color: white;">LOADING...</p>
+
+</ngx-spinner>
+<div class="wrapper" fxLayout="column" style="width: 100%;overflow:hidden;">
+  <app-navbar></app-navbar>
+  <span style="height: 100px;"></span>
+  <div class="main-container" style="width: 100vw;">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="chat-alert" fxLayout="row" fxLayoutAlign="center center">
+    <div class="chat-icon" fxLayout="column" fxLayoutAlign="center center">
+      <img class="team-avatar"
+        src="https://media.istockphoto.com/photos/portrait-of-happy-senior-man-with-thumb-up-picture-id149072555"
+        width="45px" height="45px">
+    </div>
+    <div class="chat-text" fxLayout="column" fxLayoutAlign="center center">
+      Welcome to EstiBase, what can we help you with?
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
+</div>

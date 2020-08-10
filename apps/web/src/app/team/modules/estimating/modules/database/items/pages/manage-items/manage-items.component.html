@@ -1,0 +1,41 @@
+<div class="page-layout" fxLayout="column">
+    <h1>ITEM DATABASE</h1>
+    <mat-divider style="margin-bottom: 10px;"></mat-divider>
+    <mat-form-field>
+      <mat-label> Select Database</mat-label>
+      <mat-select disableRipple>
+        <mat-option value="1">HCI Master - June 2020</mat-option>
+        <mat-option value="1">HCI Master - May 2020</mat-option>
+        <mat-option value="1">HCI Master - March 2020</mat-option>
+        <mat-option value="1">HCI Master - January 2020</mat-option>
+        <mat-option value="2">Sutro Partners - June 2020</mat-option>
+        <mat-option value="3"><i class="fal fa-plus"></i> &nbsp; Create New Database</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label> System</mat-label>
+      <mat-select disableRipple>
+        <mat-option value="1">Electrical</mat-option>
+        <mat-option value="2">Mechanical</mat-option>
+        <mat-option value="3"><i class="fal fa-plus"></i> &nbsp; Create New System</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="actions-container">
+      <button mat-raised-button color="primary">Back</button>
+      <button mat-raised-button color="primary">Add Item</button>
+      <button mat-raised-button>Edit Columns</button>
+      <button mat-raised-button routerLink="/team/estimating/database/assemblies">Assemblies Catalog</button>
+
+    </div>
+    <div class="database-container" style="width: 100%; height: 500px; background: #CFD8DC;">
+      <as-split direction="horizontal">
+        <as-split-area size="40">
+          <h2>Item Database</h2>
+        </as-split-area>
+        <as-split-area size="75">
+          <p>Entries</p>
+        </as-split-area>
+      </as-split>
+    </div>
+  </div>
+  

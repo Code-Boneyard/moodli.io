@@ -1,0 +1,72 @@
+<div class="admin-icon" fxLayout="column" fxLayoutAlign="center center">
+  <button mat-icon-button [matMenuTriggerFor]="adminMenu">
+    <i class="fal fa-cog" style="color: white;font-size: 35px;"></i>
+  </button>
+</div>
+<div class="page-layout" fxLayout="column" fxLayoutAlign="start">
+  <h1>DASHBOARD</h1>
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+  <div class="overview-container">
+    <mat-card class="overview-card">
+      <team-estimate-summary></team-estimate-summary>
+    </mat-card>
+    <mat-card class="overview-card">
+      <team-client-summary></team-client-summary>
+    </mat-card>
+    <mat-card class="overview-card">
+      <team-team-members></team-team-members>
+    </mat-card>
+    <mat-card class="overview-card">
+      <team-recent-files></team-recent-files>
+    </mat-card>
+  </div>
+
+  <div class="dashboard-container">
+    <mat-card class="card-sq-lg">
+      <team-my-estimates></team-my-estimates>
+    </mat-card>
+    <mat-card class="card-wide">
+      <team-project-map></team-project-map>
+    </mat-card>
+    <mat-card class="card-wide">
+      <team-calendar></team-calendar>
+      <div echarts [options]="chartLineOption3" style="height: 235px;"></div>
+    </mat-card>
+
+    <mat-card class="card-tall">
+      <team-my-tasks></team-my-tasks>
+    </mat-card>
+
+    <mat-card class="card-wide">
+      <team-my-clients></team-my-clients>
+      <div echarts [options]="chartLineOption1" [autoResize]="true" style="height: 235px;"></div>
+    </mat-card>
+    <mat-card class="card-wide">
+      <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 235px;"></div>
+      <team-my-projects></team-my-projects>
+    </mat-card>
+    <mat-card class="card-sq-sm">
+      <team-my-teams></team-my-teams>
+    </mat-card>
+    <img src="https://skyose.com/wp-content/uploads/2018/09/Scoro-Work-Management-Software.gif" width="800px">
+  </div>
+
+</div>
+
+
+<mat-menu #adminMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="./../admin/" routerLinkActive="active" class="pointer">
+    <i class="far fa-users"></i>&nbsp; &nbsp; Admin Dashboard</button>
+  <button mat-menu-item routerLink="./../client" routerLinkActive="active" class="pointer">
+    <i class="far fa-exchange"></i>&nbsp; &nbsp; Client View</button>
+  <button mat-menu-item routerLink="./../admin/users" routerLinkActive="active" class="pointer">
+    <i class="far fa-users-cog"></i>&nbsp; &nbsp; Manage Users</button>
+  <button mat-menu-item routerLink="./../admin/tenants" routerLinkActive="active" class="pointer">
+    <i class="far fa-building"></i>&nbsp; &nbsp; Manage Tenants</button>
+  <button mat-menu-item routerLink="./../admin/settings" routerLinkActive="active" class="pointer">
+    <i class="far fa-tools"></i>&nbsp; &nbsp; Application Settings</button>
+  <button mat-menu-item routerLink="./../admin/user/analytics" routerLinkActive="active" class="pointer">
+    <i class="far fa-user-chart"></i>&nbsp; &nbsp; User Analytics</button>
+  <button mat-menu-item routerLink="./../admin/reports" routerLinkActive="active" class="pointer">
+    <i class="far fa-file-chart-pie"></i>&nbsp; &nbsp; Admin Reports</button>
+</mat-menu>

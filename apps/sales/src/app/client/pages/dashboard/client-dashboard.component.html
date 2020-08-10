@@ -1,0 +1,60 @@
+<div class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch" >
+<div class="project-header-card" >
+  <h3>SFO TERMINAL 3 WEST MODERNIZATION</h3>
+</div>
+
+  <mat-nav-list class="web-nav-select" fxLayout="row" fxHide fxShow.gt-sm fxLayoutAlign="space-between center">
+    <mat-list-item class="nav-icon"  (click)="projectSidenav.toggle()" fxLayoutAlign="center center" fxFlex="5">
+        <i class="fal fa-arrow-circle-left"  ></i>
+    </mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/overview" fxFlex >OVERVIEW</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/design" fxFlex> DESIGN</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/estimates" fxFlex> ESTIMATES</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/controls" fxFlex>CONTROLS</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/management"fxFlex>MANAGEMENT</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/closeout"fxFlex>CLOSEOUT</mat-list-item>
+    <mat-list-item class="nav-icon" fxLayout="column" fxLayoutAlign="center center" routerLink="/dashboard/monitoring"fxFlex>MONITORING</mat-list-item>
+  </mat-nav-list>
+
+  <div class="mobile-nav-select" fxLayout="column" fxShow fxHide.gt-sm fxLayoutAlign="center center">
+  <mat-form-field fxFlex >
+    <mat-label>PROJECT</mat-label>
+      <select matNativeControl required>
+        <option value="t3w">SFO TERMINAL 3 WEST</option>
+        <option value="bart">BART CONTROLS MODERNIZATION</option>
+        <option value="nb357">GILEAD NB357</option>
+        <option value="lbnf">LONG-BASELINE NEUTRINO FACILITY</option>
+      </select>
+    </mat-form-field>
+    <mat-form-field fxFlex>
+      <mat-label>PAGE</mat-label>
+        <select matNativeControl required>
+          <option value="overview">OVERVIEW </option>
+          <option value="design">DESIGN</option>
+          <option value="estimates">ESTIMATES</option>
+          <option value="controls">CONTROLS</option>
+          <option value="management">MANAGEMENT</option>
+          <option value="controls">CLOSEOUT</option>
+          <option value="management">MONITORING</option>
+        </select>
+    </mat-form-field>
+
+
+</div>
+
+  <mat-divider></mat-divider>
+
+  <mat-sidenav-container fxLayout="column" fxLayoutAlign="start stretch" >
+    <mat-sidenav #projectSidenav mode="over" style="width: 22vw; min-width: 400px;">
+      <client-sidenav></client-sidenav>
+    </mat-sidenav>
+    <!-- Page Content -->
+    <mat-sidenav-content fxFlex="row">
+      <!-- Navigation Header -->
+      <mat-divider></mat-divider>
+
+      <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

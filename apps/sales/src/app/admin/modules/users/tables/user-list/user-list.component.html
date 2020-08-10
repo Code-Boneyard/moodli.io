@@ -1,0 +1,55 @@
+<mat-card class="wide-card">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <mat-table [dataSource]="users" [trackBy]="trackByUid" matSort class="animate">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+
+    <ng-container matColumnDef="uid">
+      <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> UID </mat-header-cell>
+      <mat-cell *matCellDef="let data "> {{ data.uid }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="displayName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.displayName }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.email }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="role">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Role </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.role }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="tenant">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Tenant </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.tenant }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="primary" (click)="addUser()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" (click)="editUser()">
+          <i class="fas fa-pencil"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef>
+
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="warn" (click)="deleteUser()">
+          <i class="fas fa-times"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  <mat-paginator [length]="1" [pageSize]="1">
+  </mat-paginator>
+</mat-card>

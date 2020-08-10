@@ -1,0 +1,11 @@
+<div class="tasks-container">
+    <mat-table [dataSource]="tasks" class="animate" style="background: transparent;">
+      <ng-container matColumnDef="description">
+        <mat-cell *matCellDef="let data"> {{ data.description }} </mat-cell>
+      </ng-container>
+  
+      <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"
+        style="margin:0px;padding:0px;max-height:8px"></mat-row>
+    </mat-table>
+  </div>
+  

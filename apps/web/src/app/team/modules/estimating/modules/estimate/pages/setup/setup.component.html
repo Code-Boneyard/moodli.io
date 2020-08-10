@@ -1,0 +1,57 @@
+<div fxLayout="column" style="width: 100vw;">
+  <form>
+
+  </form>
+  <mat-vertical-stepper fxLayout="column" style="width: 100vw;">
+    <mat-step>
+      <ng-template matStepLabel>ESTIMATE INFORMATION</ng-template>
+      <team-estimate-info></team-estimate-info>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>PROJECT INFORMATION</ng-template>
+      <team-project-info></team-project-info>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>WORK BREAKDOWN</ng-template>
+      <team-wbs></team-wbs>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>STRUCTURAL PROPERTIES</ng-template>
+
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>SITE UTILITIES</ng-template>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>PROJECT SCHEDULE</ng-template>
+      <mat-divider></mat-divider>
+      <img src="https://cdn.mos.cms.futurecdn.net/HTttSmkyFbfSrmWpRXs9Vc-1200-80.jpg" height="500px">
+      <mat-list>
+        <mat-list-item>Design Start Date</mat-list-item>
+        <mat-list-item>Design Completion Date</mat-list-item>
+        <mat-list-item>Construction Start Date</mat-list-item>
+        <mat-list-item>Construction Finish Date</mat-list-item>
+        <mat-list-item>Duration (Weeks)</mat-list-item>
+        <mat-list-item>Schedule condition (moderate, accellerated, etc)</mat-list-item>
+      </mat-list>
+      Construction Start
+      Construction Finish
+      Temporary POwer Active
+      Permanent Power
+      BAAQMD Permit
+      Substantial Completion
+      Phase X Completion
+      Design Start
+      Design Finish
+      Commissioning Start
+      <mat-list-item>Overtime % (by system estimate)</mat-list-item>
+      <mat-list-item>Swing Shift % (By system estimate)</mat-list-item>
+
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>CONTRACTS</ng-template>
+      <team-contract-builder></team-contract-builder>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</div>

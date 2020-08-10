@@ -1,0 +1,68 @@
+<div class="page-container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="back-button" fxLayout="row" fxLayoutAlign="start center"
+    style="cursor: pointer;padding:15px;width: max-content;" routerLink='/home' routerLinkActive>
+    <i style="color: rgb(11, 59, 59);" class="fas fa-chevron-circle-left fa-2x"></i>
+    <h5 style="color: rgb(11, 59, 59); margin-left: 8px;">BACK</h5>
+  </div>
+  <h2>CONTACT US</h2>
+  <mat-divider></mat-divider>
+  <div class="main-container">
+    <form fxLayout="column" [formGroup]="contactFormGroup">
+      <mat-form-field class="med-input">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" placeholder="George">
+      </mat-form-field>
+
+      <mat-form-field class="med-input">
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName="lastName" placeholder="Westinghouse">
+      </mat-form-field>
+
+      <mat-form-field class="med-input">
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" placeholder="Electrical Estimator">
+      </mat-form-field>
+
+      <mat-form-field class="med-input">
+        <mat-label>Company</mat-label>
+        <input matInput formControlName="company">
+      </mat-form-field>
+
+      <mat-form-field class="med-input" appearance="fill">
+        <mat-label>Industry</mat-label>
+        <select matNativeControl formControlName="industry" required>
+          <option value="gc">General Construction</option>
+          <option value="arch">Architectural</option>
+          <option value="elec">Electrical</option>
+          <option value="fa">Fire Alarm</option>
+          <option value="meech">Mechanical</option>
+          <option value="plmb">Plumbing</option>
+          <option value="fp">Fire Protection</option>
+          <option value="it">Network/Communications</option>
+          <option value="develop">Developer</option>
+          <option value="eng">MEP Engineer</option>
+          <option value="owner">Owner</option>
+        </select>
+      </mat-form-field>
+
+      <mat-form-field class="med-input">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+
+      <mat-form-field class="med-input">
+        <mat-label>Phone</mat-label>
+        <input matInput formControlName="phone" placeholder="(415) 123-4567">
+      </mat-form-field>
+
+      <mat-form-field class="med-input" appearance="fill">
+        <mat-label>Comments</mat-label>
+        <textarea matInput formControlName="comments" style="min-height: 250px;"></textarea>
+      </mat-form-field>
+
+      <mat-checkbox formControlName="newsletter">Sign me up for the EstiBase newsletter</mat-checkbox>
+    </form>
+    <button mat-raised-button color="primary" style="margin-top: 15px;">Submit</button>
+
+  </div>
+</div>

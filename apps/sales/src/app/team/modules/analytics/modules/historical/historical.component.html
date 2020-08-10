@@ -1,0 +1,88 @@
+<div class="page-layout" fxLayout="column">
+  <h1>HISTORICAL COSTS</h1>
+  <mat-divider style="margin-bottom: 0px !important;"></mat-divider>
+  <div class="actions-container">
+    <button class="action-button" mat-raised-button color="primary" routerLink='/team/estimating/'>Manage
+      Estimates</button>
+    <button class="action-button" mat-raised-button color="primary" routerLink='/team/projects'>Manage
+      Projects</button>
+    <button class="action-button" mat-raised-button routerLink='/team/clients'>Manage
+      Clients</button>
+    <button class="action-button" mat-raised-button>Estimating
+      View</button>
+    <button class="action-button" mat-raised-button routerLink='/team/systems'>Manage
+      Systems</button>
+    <button class="action-button" mat-raised-button routerLink='/team/estimating/rates'>Manage
+      Rates</button>
+    <button class="action-button" mat-raised-button routerLink='/team/reports'>Manage Reports
+    </button>
+  </div>
+
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Search Projects</mat-card-title>
+      <mat-card-subtitle>subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Project</mat-label>
+        <mat-select>
+          <optgroup label="Recent">
+            <option value="volvo">SFO Terminal 3 West Modernization</option>
+          </optgroup>
+          <optgroup label="Active">
+            <option value="volvo">SFO Terminal 3 West Modernization</option>
+            <option value="saab">BART Controls Modernization</option>
+            <option value="saab">Golden Gate Tennis Center</option>
+          </optgroup>
+          <optgroup label="Completed">
+            <option value="mercedes">SFO Terminal 1C/BAB</option>
+            <option value="audi">Gilead NB357 Pilot Lab</option>
+            <option value="hyatt">SFO Grand Hyatt Hotel</option>
+            <option value="tx">SFO Substation TX Bypass & Upgrade</option>
+          </optgroup>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Cost Source</mat-label>
+        <mat-select>
+          <optgroup label="Estimates">
+            <option value="volvo">100% DD HCI Estimate</option>
+            <option value="saab">50% CD HCI Estimate</option>
+          </optgroup>
+          <optgroup label="Models">
+            <option value="mercedes">10/17/18 Preliminary Cost Model</option>
+            <option value="audi">5/3/19 Structural Cost Model</option>
+          </optgroup>
+          <optgroup label="Contracts">
+            <option value="mercedes">TCCo As-Built</option>
+            <option value="audi">Rosendin Electric As-Built Cost</option>
+          </optgroup>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Ok</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Project Information</mat-card-title>
+      <mat-card-subtitle>subtitle</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="project-info-container" fxLayout="column">
+        <h4>Project Information: SFO Terminal 3 West Modernization</h4>
+        <h5>Tabs: Project vs Industry Scatter Plots, System Costs, Labor, Project Comparison</h5>
+        <h5>Status: Active</h5>
+        <h5>Size: 508,800 SF</h5>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Ok</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

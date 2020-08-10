@@ -1,0 +1,40 @@
+<div class="modal-layout">
+  <h3 mat-dialog-title>ADD NEW TASK</h3>
+  <mat-divider></mat-divider>
+
+  <div mat-dialog-content>
+    <div class="modal-container">
+      <form [formGroup]="addTaskFormGroup">
+        <div fxLayout="column">
+          <mat-form-field class="md-field">
+            <mat-label>ID</mat-label>
+            <input matInput formControlName="id">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Priority</mat-label>
+            <input matInput formControlName="priority">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Due</mat-label>
+            <input matInput formControlName="dueDate">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Status</mat-label>
+            <input matInput formControlName="status">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Active</mat-label>
+            <input matInput formControlName="isActive">
+          </mat-form-field>
+
+        </div>
+      </form>
+      <div fxLayout="row" mat-dialog-actions>
+        <button mat-raised-button color="primary" (click)="save()">Save</button>
+        <button mat-raised-button (click)="close()">Close</button>
+      </div>
+    </div>

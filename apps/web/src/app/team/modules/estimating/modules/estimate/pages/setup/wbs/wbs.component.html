@@ -1,0 +1,119 @@
+  <mat-card>
+    <form>
+    
+    </form>
+    <mat-card-content>
+
+      <div class="settings-container" fxLayout="column" fxLayoutAlign="start start">
+
+        <mat-accordion>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Areas
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="Primary Color">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Background Color">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Primary Font">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Secondary Font">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Phases
+              </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Levels
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="Primary Color">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Background Color">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Primary Font">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Secondary Font">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Systems
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="Primary Color">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Background Color">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Primary Font">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Secondary Font">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Bid Item
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+              <input matInput placeholder="Primary Color">
+            </mat-form-field>
+
+            <mat-form-field>
+              <input matInput placeholder="Background Color">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Primary Font">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Secondary Font">
+            </mat-form-field>
+          </mat-expansion-panel>
+
+        </mat-accordion>
+      </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>Ok</button>
+    </mat-card-actions>
+  </mat-card>

@@ -1,0 +1,13 @@
+<ngx-spinner size="medium" color="#FFFFFF" type="line-scale" [fullScreen]="true">
+  <p style="color: white;">LOADING...</p>
+</ngx-spinner>
+
+<div class="wrapper" fxLayout="column" style="width: 100%;overflow:hidden;">
+  <app-navbar></app-navbar>
+  <span style="height: 100px;"></span>
+  <div class="main-container" style="width: 100vw;">
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+</div>

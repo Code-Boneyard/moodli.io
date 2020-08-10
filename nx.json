@@ -1,0 +1,85 @@
+{
+  "npmScope": "estibase",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "web": {
+      "tags": []
+    },
+    "web-e2e": {
+      "tags": [],
+      "implicitDependencies": ["web"]
+    },
+    "support": {
+      "tags": []
+    },
+    "support-e2e": {
+      "tags": [],
+      "implicitDependencies": ["support"]
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    },
+    "landing": {
+      "tags": []
+    },
+    "landing-e2e": {
+      "tags": [],
+      "implicitDependencies": ["landing"]
+    },
+    "mobile": {
+      "tags": []
+    },
+    "mobile-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mobile"]
+    },
+    "docs": {
+      "tags": []
+    },
+    "docs-e2e": {
+      "tags": [],
+      "implicitDependencies": ["docs"]
+    },
+    "sales": {
+      "tags": []
+    },
+    "sales-e2e": {
+      "tags": [],
+      "implicitDependencies": ["sales"]
+    },
+    "dev": {
+      "tags": []
+    },
+    "dev-e2e": {
+      "tags": [],
+      "implicitDependencies": ["dev"]
+    },
+    "investors": {
+      "tags": []
+    },
+    "investors-e2e": {
+      "tags": [],
+      "implicitDependencies": ["investors"]
+    }
+  }
+}

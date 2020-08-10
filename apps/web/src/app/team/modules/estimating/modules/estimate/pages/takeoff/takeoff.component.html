@@ -1,0 +1,66 @@
+<mat-divider></mat-divider>
+<div style="width: 100vw; height: 500px; background: #CFD8DC;">
+  (Manual Entry, Import from Revit, Import from Excel, Sync with Live Count, Other)
+  <as-split direction="horizontal">
+    <as-split-area size="40">
+      For each entry: Track items HISTORY, track user moddifications and timestamp changes.
+      <mat-form-field appearance="outline">
+        <mat-label>System</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let system of systems" [value]="system.value">
+            {{system.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Database Source </mat-label>
+        <mat-select>
+          <mat-option *ngFor="let database of database" [value]="database.value">
+            {{database.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+
+      <mat-table [dataSource]="activeEstimates" matSort class="animate">
+
+        <ng-container matColumnDef="project">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Project </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.project }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="designPhase">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Design Phase </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.designPhase }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="designProgress">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Design Progress </mat-header-cell>
+          <mat-cell *matCellDef="let data"> {{ data.designProgress }} </mat-cell>
+        </ng-container>
+
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+      </mat-table>
+
+      <mat-paginator [length]="1" [pageSize]="1"></mat-paginator>
+
+
+    </as-split-area>
+    <as-split-area size="60">
+      <as-split direction="vertical">
+        <as-split-area size="25">
+          <p>WBS Assignment Area</p>
+        </as-split-area>
+        <as-split-area size="75">
+          <p>Entries</p>
+        </as-split-area>
+      </as-split>
+    </as-split-area>
+  </as-split>
+</div>

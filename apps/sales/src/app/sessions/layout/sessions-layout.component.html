@@ -1,0 +1,25 @@
+<div class="sessions-layout" fxLayout="row" fxLayoutAlign="space-evenly" fxFlex>
+  <!--Carousel Area-->
+  <div class="slide-area">
+
+  </div>
+  <!--Login Area-->
+  <div class="login-container" fxLayout="column" fxLayoutAlign="center center">
+    <div class="sessions-logo" fxLayout="column" fxLayoutAlign="center center" fxFlex="30">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/estibase-dev.appspot.com/o/logos%2Flogo_primary-wide.png?alt=media&token=0948e9f5-364a-45a5-8a82-c660542b5eee"
+        height="70px" />
+    </div>
+
+    <div class="sessions-main" fxLayout="column" fxLayoutAlign="start center" fxFlex="40">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="sessions-nav" fxLayout="column" fxLayoutAlign="end center" fxFlex="30">
+      <sessions-sessions-nav></sessions-sessions-nav>
+    </div>
+
+
+
+  </div>
+</div>

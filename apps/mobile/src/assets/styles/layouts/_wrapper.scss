@@ -1,0 +1,14 @@
+html, body { 
+    height: 100%; 
+    width: 100%;
+    margin: 0;  
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-grow: 1;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}

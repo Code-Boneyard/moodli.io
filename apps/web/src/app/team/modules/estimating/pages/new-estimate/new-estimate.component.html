@@ -1,0 +1,136 @@
+<div class="page-layout" fxLayout="column">
+  <h1>NEW ESTIMATE</h1>
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+
+
+
+  <mat-vertical-stepper [linear]="false" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>ESTIMATE INFORMATION</ng-template>
+      <div class="form-container" fxLayout="row wrap">
+        <div fxLayout="column">
+
+          <mat-form-field class="ml-field">
+            <mat-label>Client</mat-label>
+            <mat-select>
+              <mat-option>San Francisco International Airport</mat-option>
+              <mat-option>City of San Francisco</mat-option>
+              <mat-option>Level 10 Construction</mat-option>
+              <mat-option>ARUP</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Client Contact</mat-label>
+            <mat-select>
+              <option value="volvo">Feasability</option>
+              <option value="volvo">Programming</option>
+              <option value="volvo">Schematic Design</option>
+              <option value="saab">Design Development</option>
+              <option value="saab">Construction Documentation</option>
+              <option value="saab">As-Built</option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Estimate Type</mat-label>
+            <mat-select>
+              <mat-option>Preliminary Cost Study</mat-option>
+              <mat-option>Tier 1 Estimate</mat-option>
+              <mat-option>Tier 2 Estimate</mat-option>
+              <mat-option>Tier 3 Estimate</mat-option>
+              <mat-option>As-Built Cost</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Project</mat-label>
+            <mat-select>
+              <mat-option>SFO Terminal 3 West</mat-option>
+              <mat-option>Golden Gate Tennis Center</mat-option>
+              <mat-option>Rossi Pool Renovation</mat-option>
+              <mat-option>Long-Baseline Neutrino Facility</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Estimate Issuance</mat-label>
+            <input matInput>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Design Package</mat-label>
+            <mat-select multiple>
+              <mat-option>SFO Terminal 3 West</mat-option>
+              <mat-option>Golden Gate Tennis Center</mat-option>
+              <mat-option>Rossi Pool Renovation</mat-option>
+              <mat-option>Long-Baseline Neutrino Facility</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="ml-field">
+            <mat-label>Design Stage</mat-label>
+            <mat-select>
+              <option value="volvo">Feasability</option>
+              <option value="volvo">Programming</option>
+              <option value="volvo">Schematic Design</option>
+              <option value="saab">Design Development</option>
+              <option value="saab">Construction Documentation</option>
+              <option value="saab">As-Built</option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxLayout="column">
+          <mat-form-field>
+            <mat-label>Estimate Due Date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+
+      Status
+      Priority
+      Meetings
+      Tasks
+      Square Footage
+
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+
+    <mat-step>
+      <ng-template matStepLabel>DATABASE</ng-template>
+      Item Database
+      Assembly Database
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel> SYSTEMS </ng-template>
+
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>TEAM</ng-template>
+
+      Team
+      estimators: string;
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
+</div>

@@ -1,0 +1,116 @@
+<div class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch">
+  <div class="header-container" fxLayout="row" fxFlex >
+    <div class="title-container" fxLayout="column" fxFlex>
+      <h3>PROJECT MONITORING</h3> 
+    </div>
+    <div class="accordion-actions" fxLayout="column" fxLayoutAlign="center center" >
+      <mat-nav-list fxLayout="column" >
+        <mat-list-item (click)="togglePanel()" fxLayout="column" fxLayoutAlign="end end"> <i class="fal fa-chevron-double-down"></i></mat-list-item>
+      </mat-nav-list>
+    </div>
+  </div>
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          RECENT MEDIA
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      
+      <div class="overview-container">
+
+        <mat-card class="overview-card" >
+          <img class="project-map" src="assets/images/projects/media.jpg" height="80px" style="margin-left: 10px;"/>
+          <img class="project-map" src="assets/images/projects/t3.jpg" height="80px" style="margin-left: 10px;"/>
+          <img class="project-map" src="assets/images/projects/t3light.jpg" height="80px" style="margin-left: 10px;"/>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          FACILITY MONITORING
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container" >
+
+        <mat-card class="card-square-md">
+          <mat-card-title>LIVE MONITORING</mat-card-title>
+            <mat-card-content>
+              <img class="project-map" src="assets/images/projects/media.jpg" height="120%" width="305px" />
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>WEATHER</mat-card-title>
+            <mat-card-content>
+              <img class="project-map" src="assets/images/projects/weather.PNG" height="100%" width="310px" />
+              <p>San Francisco, CA</p>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-wide">
+          <mat-card-title>NEWS</mat-card-title>
+            <mat-card-content>
+                Gantt Chart
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>LOCATION</mat-card-title>
+            <mat-card-content>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="card-square-md">
+          <mat-card-title>MAINTENANCE</mat-card-title>
+            <mat-card-content>
+            </mat-card-content>
+        </mat-card>
+
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="panelOpenState">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          CUSTOM WIDGETS
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="overview-container">
+        <mat-card class="overview-card">
+          <mat-card-title>SIZE</mat-card-title>
+            <mat-card-content>
+              <h2>558,850 GSF</h2>
+            </mat-card-content>
+        </mat-card>
+          <mat-card class="card-wide">
+            <mat-card-title>ACTUAL VS BUDGET</mat-card-title>
+              <mat-card-content>
+                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+          <mat-card class="overview-card">
+            <mat-card-title>PROJECT COSTS JTD</mat-card-title>
+              <mat-card-content>
+                <h2>$2,644,010</h2>
+                22% of Total Budget
+              </mat-card-content>
+          </mat-card>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+

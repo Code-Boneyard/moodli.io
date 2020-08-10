@@ -1,0 +1,33 @@
+<mat-card class="wide-card" style="margin-top: 10px;">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <mat-table [dataSource]="systems" matSort class="animate">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> ID </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.id }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.description }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="primary" (click)="addSystem()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" (click)="editSystem()">
+          <i class="fas fa-pencil"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</mat-card>

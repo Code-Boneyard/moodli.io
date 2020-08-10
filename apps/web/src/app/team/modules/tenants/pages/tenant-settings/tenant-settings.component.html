@@ -1,0 +1,143 @@
+<div class="page-layout" fxLayout="column">
+  <h1>TENANT SETTINGS</h1>
+
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+  <div class="dashboard-container" fxLayout="column">
+    <mat-accordion>
+      <form>
+
+      </form>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Application Styling
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column">
+          Company Logo
+          <mat-form-field class="md-field">
+            <mat-label>Color Profile</mat-label>
+            <mat-select>
+              <option value="golden-gate">Golden Gate</option>
+              <option value="wharf">Fisherman's Wharf</option>
+              <option value="presidio">Presidio</option>
+              <option value="ocean-beach">Ocean Beach</option>
+              <option value="sutro-tower">Sutro Tower</option>
+              <option value="civic-center">Civic Center</option>
+              <option value="hayes">Hayes Valley</option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Primary Font</mat-label>
+            <mat-select>
+              <option value="nunito">Nunito</option>
+              <option value="roboto">Roboto</option>
+              <option value="raleway">Raleway</option>
+              <option value="cabin">Cabin</option>
+              <option value="montserrat">Montserrat</option>
+              <option value="open-sans">Open Sans</option>
+              <option value="lato">Lato</option>
+              <option value="ocean-beach">Oswald</option>
+              <option value="ocean-beach">Poppins</option>
+              <option value="ocean-beach">Quicksand</option>
+              <option value="ocean-beach">Fira Sans</option>
+              <option value="ocean-beach">Rubik</option>
+              <option value="ocean-beach">Muli</option>
+              <option value="ocean-beach">Ubuntu</option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <mat-label>Secondary Font</mat-label>
+            <mat-select>
+              <option value="nunito">Nunito</option>
+              <option value="roboto">Roboto</option>
+              <option value="raleway">Raleway</option>
+              <option value="cabin">Cabin</option>
+              <option value="montserrat">Montserrat</option>
+              <option value="open-sans">Open Sans</option>
+              <option value="lato">Lato</option>
+              <option value="ocean-beach">Oswald</option>
+              <option value="ocean-beach">Poppins</option>
+              <option value="ocean-beach">Quicksand</option>
+              <option value="ocean-beach">Fira Sans</option>
+              <option value="ocean-beach">Rubik</option>
+              <option value="ocean-beach">Muli</option>
+              <option value="ocean-beach">Ubuntu</option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Notifications
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Preferences
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column">
+          <mat-form-field class="md-field">
+            <mat-label>Default Language</mat-label>
+            <input matInput >
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput >
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput placeholder="Primary Font">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput placeholder="Secondary Font">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Security & Privacy
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column">
+          <mat-form-field class="md-field">
+            <mat-label>Project</mat-label>
+            <mat-select>
+              <optgroup label="Recent">
+                <option value="volvo">SFO Terminal 3 West Modernization</option>
+              </optgroup>
+              <optgroup label="Active">
+                <option value="volvo">SFO Terminal 3 West Modernization</option>
+                <option value="saab">BART Controls Modernization</option>
+                <option value="saab">Golden Gate Tennis Center</option>
+              </optgroup>
+              <optgroup label="Completed">
+                <option value="mercedes">SFO Terminal 1C/BAB</option>
+                <option value="audi">Gilead NB357 Pilot Lab</option>
+                <option value="hyatt">SFO Grand Hyatt Hotel</option>
+                <option value="tx">SFO Substation TX Bypass & Upgrade</option>
+              </optgroup>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput placeholder="Primary Color">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Background Color">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput placeholder="Primary Font">
+          </mat-form-field>
+          <mat-form-field class="md-field">
+            <input matInput placeholder="Secondary Font">
+          </mat-form-field>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

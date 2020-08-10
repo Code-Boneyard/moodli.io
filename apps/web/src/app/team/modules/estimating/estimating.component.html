@@ -1,0 +1,65 @@
+<div class="page-layout" fxLayout="column">
+  <h1>MANAGE ESTIMATES</h1>
+  <mat-divider style="margin-bottom: 0px !important;"></mat-divider>
+  <div class="actions-container">
+    <button class="action-button" mat-raised-button color="primary" routerLink='/team/estimating/new/'>New
+      Estimate</button>
+    <button class="action-button" mat-raised-button routerLink='/team/items/'>Item Database
+    </button>
+    <button class="action-button" mat-raised-button routerLink='/team/assemblies/'>Assemblies
+      Catalog</button>
+    <button class="action-button" mat-raised-button routerLink='/team/estimating/defaults'>Estimates
+      Defaults</button>
+    <button class="action-button" mat-raised-button routerLink='/team/reports/manage'>Report
+      Styles</button>
+  </div>
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+  <mat-accordion class="menu-accordion">
+    <mat-expansion-panel [expanded]=true>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          ACTIVE &nbsp; <span class="accordion-badge">2</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <team-active-estimates></team-active-estimates>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          IN REVIEW &nbsp; <span class="accordion-badge">1</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <team-submitted-estimates></team-submitted-estimates>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          COMPLETED &nbsp; <span class="accordion-badge">12</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <team-completed-estimates></team-completed-estimates>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          DELAYED &nbsp; <span class="accordion-badge">1</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <team-delayed-estimates></team-delayed-estimates>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          ARCHIVED &nbsp; <span class="accordion-badge">38</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <team-archived-estimates></team-archived-estimates>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="end end">
+  <span>
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/estibase-dev.appspot.com/o/logos%2Flogo_primary-wide.png?alt=media&token=0948e9f5-364a-45a5-8a82-c660542b5eee"
+      height="50px" style="margin-bottom: 8px;cursor: pointer;" routerLink="/home" routerLinkActive="active" />
+  </span>
+  <span class="fill-spacer"></span>
+  <span class="menu-container">
+    <mat-nav-list fxLayout="row">
+      <mat-list-item routerLink="/home" routerLinkActive="active">Home</mat-list-item>
+      <mat-list-item routerLink="/solutions" routerLinkActive="active">Solutions</mat-list-item>
+      <mat-list-item routerLink="/features" routerLinkActive="active">Features</mat-list-item>
+      <mat-list-item routerLink="/pricing" routerLinkActive="active">Pricing </mat-list-item>
+      <mat-list-item routerLink="/contact" routerLinkActive="active">Contact </mat-list-item>
+      <mat-list-item>|</mat-list-item>
+      <mat-list-item onClick="window.open('//web.estibase.com')"> Login </mat-list-item>
+    </mat-nav-list>
+  </span>
+</mat-toolbar>

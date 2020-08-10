@@ -1,0 +1,19 @@
+.fill-spacer {
+  flex: 1 1 auto;
+}
+
+.brand-item {
+  font-size: large;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  background-color: #263238;
+  z-index: 1;
+
+  .mat-list-item {
+    font-size: small;
+    color: #ffffff;
+  }
+}

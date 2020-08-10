@@ -1,0 +1,9 @@
+.features-section {
+  min-height: 650px;
+  padding: 50px;
+
+  ::ng-deep .mat-tab-label-active {
+    color: rgb(219, 172, 41);
+  }
+
+}

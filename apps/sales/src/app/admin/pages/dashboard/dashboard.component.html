@@ -1,0 +1,171 @@
+<div class="page-layout" fxLayout="column">
+  <h1>ADMIN DASHBOARD</h1>
+  <mat-divider style="margin-bottom: 0 !important;"></mat-divider>
+  <admin-actions></admin-actions>
+  <mat-divider></mat-divider>
+  <mat-accordion class="menu-accordion">
+    <mat-expansion-panel [expanded]=true>
+      <mat-expansion-panel-header>
+        PERFORMANCE
+      </mat-expansion-panel-header>
+
+      <div class="status-container">
+        <mat-card class="status-card">
+          <admin-engagement-summary></admin-engagement-summary>
+        </mat-card>
+
+        <mat-card class="status-card">
+          <admin-deployment-summary></admin-deployment-summary>
+        </mat-card>
+
+        <mat-card class="status-card">
+          <admin-application-status></admin-application-status>
+        </mat-card>
+
+        <mat-card class="status-card">
+          <admin-database-status></admin-database-status>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        USER MANAGEMENT
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container">
+
+        <mat-card class="card-tall">
+          <mat-card-title>TENANT ACTIVITY LOG</mat-card-title>
+          <admin-user-activity></admin-user-activity>
+        </mat-card>
+
+
+        <mat-card class="card-wide">
+          <mat-card-title>ROLES & PERMISSIONS</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        TENANT MANAGEMENT
+      </mat-expansion-panel-header>
+      <div class="dashboard-container">
+        <mat-card class="card-tall">
+          <mat-card-title>TENANT ACTIVITY LOG</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>GOOGLE ADWORDS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>Here's a title</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        ISSUES & SUPPORT &nbsp; <span class="accordion-badge">12</span>
+      </mat-expansion-panel-header>
+      <div class="dashboard-container">
+        <mat-card class="card-tall">
+          <mat-card-title>SUPPORT TICKETS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>BUGS/ISSUES</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>BACKLOG</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        DEVOPS
+      </mat-expansion-panel-header>
+      <div class="dashboard-container">
+        <mat-card class="card-tall">
+          <mat-card-title>SPRINTS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>BACKLOG</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>PERFORMANCE</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>DEVELOPER JOURNAL</mat-card-title>
+        </mat-card>
+        <button mat-raised-button color="primary">New Release</button>
+        <button mat-raised-button color="primary">New Build</button>
+        <button mat-raised-button color="primary">Deployment Log</button>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        BILLING & PAYMENTS
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container">
+        <mat-card class="card-tall">
+          <mat-card-title>TENANT ACTIVITY LOG</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>GOOGLE ADWORDS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>Here's a title</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        ADVERTISING / CMS
+      </mat-expansion-panel-header>
+      <div class="dashboard-container">
+        <mat-card class="card-tall">
+          <mat-card-title>LANDING PAGE MEDIA</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>UPSELL PREFERENCES</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>EMAIL TEMPLATES</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>GOOGLE ADWORDS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>LOGOS & BRAND ASSETS</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]=false>
+      <mat-expansion-panel-header>
+        SALES / CRM
+      </mat-expansion-panel-header>
+
+      <div class="dashboard-container">
+
+        <mat-card class="card-tall">
+          <mat-card-title>TOP ACCOUNTS</mat-card-title>
+        </mat-card>
+        <mat-card class="card-wide">
+          <mat-card-title>PIPELINE SNAPSHOT</mat-card-title>
+        </mat-card>
+
+        <mat-card class="card-wide">
+          <mat-card-title>CHURN RATE</mat-card-title>
+        </mat-card>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+</div>

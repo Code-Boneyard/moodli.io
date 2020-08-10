@@ -1,0 +1,62 @@
+<div class="admin-icon" fxLayout="column" fxLayoutAlign="center center">
+  <button mat-icon-button [matMenuTriggerFor]="adminMenu">
+    <i class="fal fa-cog" style="color: white;font-size: 35px;"></i>
+  </button>
+</div>
+<div class="page-layout" fxLayout="column" fxLayoutAlign="start">
+  <h1>SUPPORT DASHBOARD</h1>
+  <mat-divider style="margin-bottom: 0px !important;"></mat-divider>
+  <team-team-actions></team-team-actions>
+  <mat-divider style="margin-bottom: 10px;"></mat-divider>
+  <div class="overview-container">
+    <mat-card class="overview-card">
+      Assigned Tickets
+    </mat-card>
+    <mat-card class="overview-card">
+      Active Tickets
+    </mat-card>
+    <mat-card class="overview-card">
+      <team-active-team-members></team-active-team-members>
+    </mat-card>
+    <mat-card class="overview-card">
+      <team-recent-files></team-recent-files>
+    </mat-card>
+  </div>
+
+  <div class="dashboard-container">
+    <mat-card class="card-wide">
+
+    </mat-card>
+
+    <mat-card class="card-tall">
+      <team-my-tasks></team-my-tasks>
+      <div echarts [options]="salesChartPie" [autoResize]="true" style="height: 235px;"></div>
+    </mat-card>
+
+    <mat-card class="card-wide">
+      <div echarts [options]="salesChartBar" [autoResize]="true" style="height: 235px;"></div>
+
+    </mat-card>
+    <mat-card class="card-sq-sm">
+
+    </mat-card>
+  </div>
+</div>
+
+
+<mat-menu #adminMenu="matMenu" xPosition="before">
+  <button mat-menu-item routerLink="./../admin/" routerLinkActive="active" class="pointer">
+    <i class="far fa-users"></i>&nbsp; &nbsp; Admin Dashboard</button>
+  <button mat-menu-item routerLink="./../admin/user/log" routerLinkActive="active" class="pointer">
+    <i class="far fa-clipboard-list"></i>&nbsp; &nbsp; User Activity</button>
+  <button mat-menu-item routerLink="./../admin/users" routerLinkActive="active" class="pointer">
+    <i class="far fa-users-cog"></i>&nbsp; &nbsp; Manage Users</button>
+  <button mat-menu-item routerLink="./../admin/tenants" routerLinkActive="active" class="pointer">
+    <i class="far fa-building"></i>&nbsp; &nbsp; Manage Tenants</button>
+  <button mat-menu-item routerLink="./../admin/settings" routerLinkActive="active" class="pointer">
+    <i class="far fa-tools"></i>&nbsp; &nbsp; Application Settings</button>
+  <button mat-menu-item routerLink="./../admin/user/analytics" routerLinkActive="active" class="pointer">
+    <i class="far fa-user-chart"></i>&nbsp; &nbsp; User Analytics</button>
+  <button mat-menu-item routerLink="./../admin/reports" routerLinkActive="active" class="pointer">
+    <i class="far fa-file-chart-pie"></i>&nbsp; &nbsp; Admin Reports</button>
+</mat-menu>

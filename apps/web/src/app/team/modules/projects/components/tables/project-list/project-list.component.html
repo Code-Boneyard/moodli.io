@@ -1,0 +1,56 @@
+<mat-card class="wide-card" style="margin-top: 10px;">
+  <mat-form-field>
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+  </mat-form-field>
+
+  <mat-table [dataSource]="projects" matSort class="animate">
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate"></mat-row>
+    <ng-container matColumnDef="projectName">
+      <mat-header-cell *matHeaderCellDef mat-sort-header fxFlex> Project Name </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.projectName }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+      <mat-cell *matCellDef="let data"> {{ data.status }} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="primary" (click)="addProject()">
+          <i class="fas fa-plus"></i>
+        </button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" [matMenuTriggerFor]="projectActions" >
+          <i class="fas fa-pencil"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef>
+
+      </mat-header-cell>
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="warn" (click)="deleteProject()">
+          <i class="fas fa-times"></i>
+        </button>
+      </mat-cell>
+    </ng-container>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</mat-card>
+
+
+<mat-menu #projectActions="matMenu" xPosition="before">
+  <button mat-menu-item (click)="editProject()" class="pointer">
+    <i class="fal fa-edit"></i>&nbsp; &nbsp; Edit</button>
+  <button mat-menu-item routerLink="modules/tenants/teams" routerLinkActive="active" class="pointer">
+    <i class="fal fa-trash-alt"></i>&nbsp; &nbsp; Delete</button>
+  <button mat-menu-item routerLink="modules/tenants/subscriptions" routerLinkActive="active" class="pointer">
+    <i class="fal fa-search-dollar"></i>&nbsp; &nbsp; Compare</button>
+  <button mat-menu-item routerLink="modules/tenants/billing" routerLinkActive="active" class="pointer">
+    <i class="fal fa-copy"></i>&nbsp; &nbsp; Duplicate</button>
+  <button mat-menu-item routerLink="modules/tenants/billing" routerLinkActive="active" class="pointer">
+    <i class="fal fa-file-chart-line"></i>&nbsp; &nbsp; Quick Report</button>
+</mat-menu>

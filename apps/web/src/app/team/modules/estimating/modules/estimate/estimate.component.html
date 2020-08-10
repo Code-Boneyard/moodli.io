@@ -1,0 +1,71 @@
+<div class="module-layout" fxLayout="column" style="max-width: 100vw;">
+  <team-estimate-navbar></team-estimate-navbar>
+  <mat-tab-group style="display: flex;">
+    <mat-tab label="Information">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Drawings">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        Drawings
+        <p>LiveCount</p>
+        <p>Details</p>
+        <p>Convert to Plans</p>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Qualifications">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        Basis of
+        Estimate </div>
+    </mat-tab>
+    <mat-tab label="Takeoff">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-takeoff></team-takeoff>
+      </div>
+    </mat-tab>
+    <mat-tab label="Labor">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-direct-labor></team-direct-labor>
+        <team-labor-escalation></team-labor-escalation>
+        <team-labor-column></team-labor-column>
+        <team-labor-factor></team-labor-factor>
+        <team-incidental-labor></team-incidental-labor>
+      </div>
+    </mat-tab>
+    <mat-tab label="Indirect Costs">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-indirect-labor></team-indirect-labor>
+        <team-general-expenses></team-general-expenses>
+        <team-equipment></team-equipment>
+      </div>
+    </mat-tab>
+    <mat-tab label="Vendors">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-quoted-materials></team-quoted-materials>
+        <team-subcontractors></team-subcontractors>
+      </div>
+    </mat-tab>
+    <mat-tab label="Extension">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-extension></team-extension>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Summary">
+      <div class="main-container" fxLayout="column" fxLayoutAlign="start start" style="min-height:83vh;flex-grow: 1;">
+        <team-final-pricing></team-final-pricing>
+      </div>
+    </mat-tab>
+    <mat-tab label="Reporting">
+    </mat-tab>
+    <mat-tab label="Analytics">
+    </mat-tab>
+    <mat-tab label="Client Access"> Client Access </mat-tab>
+
+  </mat-tab-group>
+
+  <team-summary-footer></team-summary-footer>
+</div>

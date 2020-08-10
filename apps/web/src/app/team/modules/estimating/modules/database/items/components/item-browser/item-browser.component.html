@@ -1,0 +1,12 @@
+<mat-table [dataSource]="estimates" matSort class="animate" style="background: transparent;">
+  <ng-container matColumnDef="package">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> # </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{ data.package }} </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="issuance">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+    <mat-cell *matCellDef="let data"> {{ data.issuance }} </mat-cell>
+  </ng-container>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;" class="animate" style="margin:0px;padding:0px;max-height:8px"></mat-row>
+</mat-table>

@@ -1,0 +1,29 @@
+<div class="page-container">
+  <div class="back-button" fxLayout="row" fxLayoutAlign="start center"
+    style="cursor: pointer;padding:15px;width: max-content;" routerLink='/home' routerLinkActive>
+    <i style="color: rgb(11, 59, 59);" class="fas fa-chevron-circle-left fa-2x"></i>
+    <h5 style="color: rgb(11, 59, 59); margin-left: 8px;">BACK</h5>
+  </div>
+  <h2>PRICING</h2>
+  <mat-divider style="margin-bottom: 15px;"></mat-divider>
+  <mat-card style="margin-bottom: 20px;">
+    <mat-card-title>
+      Base Subscription
+    </mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item>Material Database</mat-list-item>
+        <mat-list-item>Client Analytics Portal</mat-list-item>
+        <mat-list-item>Task & File Management</mat-list-item>
+        <mat-list-item>Modern Reporting Suite</mat-list-item>
+        <mat-list-item>Import Projects from Procore</mat-list-item>
+        <mat-list-item>Link with Building Connected</mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+
+  <h3>Modules:</h3>
+  <div style="justify-content: center;">
+    <app-price-table></app-price-table>
+  </div>
+</div>
