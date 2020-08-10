@@ -33,12 +33,6 @@
       "tags": [],
       "implicitDependencies": ["support"]
     },
-    "api": {
-      "tags": []
-    },
-    "api-interfaces": {
-      "tags": []
-    },
     "landing": {
       "tags": []
     },
@@ -59,27 +53,6 @@
     "docs-e2e": {
       "tags": [],
       "implicitDependencies": ["docs"]
-    },
-    "sales": {
-      "tags": []
-    },
-    "sales-e2e": {
-      "tags": [],
-      "implicitDependencies": ["sales"]
-    },
-    "dev": {
-      "tags": []
-    },
-    "dev-e2e": {
-      "tags": [],
-      "implicitDependencies": ["dev"]
-    },
-    "investors": {
-      "tags": []
-    },
-    "investors-e2e": {
-      "tags": [],
-      "implicitDependencies": ["investors"]
     }
   }
 }
