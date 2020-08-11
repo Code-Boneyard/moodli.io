@@ -3,14 +3,14 @@ export const environment = {
   logoutURL: 'http://localhost:4200',
   apiURL: 'localhost:8800',
   firebase: {
-    apiKey: "AIzaSyCfm8OlPr8RXCkGCJ78I9r0EIsaqIB2uXU",
+    apiKey: "AIzaSyBOvIZhn4acIcRPndcGELUdK0SWDSt8KOQ",
     authDomain: "moodlio-dev.firebaseapp.com",
     databaseURL: "https://moodlio-dev.firebaseio.com",
     projectId: "moodlio-dev",
     storageBucket: "moodlio-dev.appspot.com",
-    messagingSenderId: "690341092566",
-    appId: "1:690341092566:web:d22c524fa675192650fd77",
-    measurementId: "G-RSMCFQW7XY"
+    messagingSenderId: "297196429841",
+    appId: "1:297196429841:web:c37027cf013fa6b43c87b0",
+    measurementId: "G-G16YSBEPG3"
   },
 };
 

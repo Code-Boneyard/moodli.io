@@ -1,22 +1,19 @@
 <div class="nav-menu" fxLayout="row">
   <mat-nav-list fxLayout="row" fxLayoutAlign="center center">
+    <mat-list-item [matMenuTriggerFor]="filesMenu">
+      <h3>JOURNAL &nbsp;<i class="fal fa-chevron-down"></i></h3>
+    </mat-list-item>
     <mat-list-item [matMenuTriggerFor]="projectsMenu">
-      <h3>PROJECTS &nbsp;<i class="fal fa-chevron-down"></i></h3>
+      <h3>FITNESS &nbsp;<i class="fal fa-chevron-down"></i></h3>
     </mat-list-item>
     <mat-list-item [matMenuTriggerFor]="estimatingMenu">
-      <h3>ESTIMATING &nbsp;<i class="fal fa-chevron-down"></i></h3>
+      <h3>GOALS &nbsp;<i class="fal fa-chevron-down"></i></h3>
     </mat-list-item>
     <mat-list-item [matMenuTriggerFor]="reportingMenu">
-      <h3>REPORTING &nbsp;<i class="fal fa-chevron-down"></i></h3>
+      <h3>SOCIAL &nbsp;<i class="fal fa-chevron-down"></i></h3>
     </mat-list-item>
     <mat-list-item [matMenuTriggerFor]="analyticsMenu">
-      <h3>ANALTYICS &nbsp;<i class="fal fa-chevron-down"></i></h3>
-    </mat-list-item>
-    <mat-list-item [matMenuTriggerFor]="filesMenu">
-      <h3>FILES &nbsp;<i class="fal fa-chevron-down"></i></h3>
-    </mat-list-item>
-    <mat-list-item [matMenuTriggerFor]="clientsMenu">
-      <h3>CLIENTS &nbsp;<i class="fal fa-chevron-down"></i></h3>
+      <h3>TASKS &nbsp;<i class="fal fa-chevron-down"></i></h3>
     </mat-list-item>
   </mat-nav-list>
 
